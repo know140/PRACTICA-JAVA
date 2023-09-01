@@ -21,19 +21,33 @@ alert("Hola, " + nombre + " " + apellido + " Sige los pasos de compra");
 // Pregunta al usuario si prefiere remeras lisas o estampadas
 var respuesta = prompt("¿Prefieres remeras lisas o estampadas?").toLowerCase(); // Convertimos la respuesta a minúsculas
 
-// Verifica la respuesta del usuario
 if (respuesta === "lisas") {
   console.log("Perfecto, tenemos una gran selección de remeras lisas para ti.");
-
+  var verLisas = confirm("¿Deseas ver imágenes de remeras lisas?");
+  
+  if (verLisas) {
+    // Redirige al usuario a la página de imágenes de remeras lisas
+    window.location.href = "categorias/lisas.html"; // Reemplaza con la URL correcta
+  } else {
+    console.log("No hay problema. Si cambias de opinión, siempre puedes volver a visitarnos.");
+  }
 } else if (respuesta === "estampadas") {
   console.log("Genial, también tenemos una variedad de remeras estampadas para elegir.");
-
-
-
-
+  var verEstampadas = confirm("¿Deseas ver imágenes de remeras estampadas?");
+  
+  if (verEstampadas) {
+    // Redirige al usuario a la página de imágenes de remeras estampadas
+    window.location.href = "categorias/estampadas"; // Reemplaza con la URL correcta
+  } else {
+    console.log("No hay problema. Si cambias de opinión, siempre puedes volver a visitarnos.");
+  }
 } else {
   console.log("No entendí tu respuesta. Por favor, responde 'lisas' o 'estampadas'.");
 }
+
+
+
+
 
 
     </script>
