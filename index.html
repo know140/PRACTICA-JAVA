@@ -8,13 +8,33 @@
 <body>
 
     <script>
-let
-nombre= prompt ("ingrese su nombre");
-apellido= prompt ("ingrese su apellido");
-let hombreOmujer=
 
-alert("su nombre completo es: "+ nombre+" "+ apellido );
-console.log("para que vea el dearrolador se llama "+ nombre +" "+ apellido);
+
+// Mensaje de bienvenida
+alert("¡Bienvenido a CUBO Indumentaria!");
+
+var nombre = prompt("Por favor, ingresa tu nombre:");
+var apellido = prompt("Por favor, ingresa tu apellido:");
+
+alert("Hola, " + nombre + " " + apellido + " Sige los pasos de compra");
+
+// Pregunta al usuario si prefiere remeras lisas o estampadas
+var respuesta = prompt("¿Prefieres remeras lisas o estampadas?").toLowerCase(); // Convertimos la respuesta a minúsculas
+
+// Verifica la respuesta del usuario
+if (respuesta === "lisas") {
+  console.log("Perfecto, tenemos una gran selección de remeras lisas para ti.");
+
+} else if (respuesta === "estampadas") {
+  console.log("Genial, también tenemos una variedad de remeras estampadas para elegir.");
+
+
+
+
+} else {
+  console.log("No entendí tu respuesta. Por favor, responde 'lisas' o 'estampadas'.");
+}
+
 
     </script>
     
