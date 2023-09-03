@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador carrito</title>
+</head>
+<body>
+    <script>
+
+alert("¡Bienvenido a CUBO Indumentaria!");
+
+var nombre = prompt("Por favor, ingresa tu nombre:");
+var apellido = prompt("Por favor, ingresa tu apellido:");
+
+alert("Hola, " + nombre + " " + apellido + " Sigue los pasos de compra");
+
+var respuesta;
+var carrito = []; 
+var total = 0; 
+
+while (true) {
+  
+  respuesta = prompt("¿Qué producto deseas agregar al carrito? \n- Remera Lisa: $10\n- Remera Estampada: $15\n- Pantalón: $20\n- comprar").toLowerCase(); // Convertimos la respuesta a minúsculas
+
+  if (respuesta === "remera lisa") {
+    carrito.push("Remera Lisa");
+    total += 10;
+  } else if (respuesta === "remera estampada") {
+    carrito.push("Remera Estampada");
+    total += 15;
+  } else if (respuesta === "pantalón") {
+    carrito.push("Pantalón");
+    total += 20;
+  } else if (respuesta === "comprar") {
+    break; 
+  } else {
+   
+    alert("Respuesta no válida. Por favor, elige un producto o 'comprar'.");
+  }
+}
+
+
+if (carrito.length > 0) {
+  alert("Resumen de la compra:\n\n" + carrito.join("\n") + "\n\nTotal: $" + total);
+} else {
+  alert("No se agregaron productos al carrito. Gracias por visitarnos.");
+}
+    </script>
+</body>
+</html>
