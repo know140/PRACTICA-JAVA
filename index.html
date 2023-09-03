@@ -13,7 +13,7 @@ alert("¡Bienvenido a CUBO Indumentaria!");
 var nombre = prompt("Por favor, ingresa tu nombre:");
 var apellido = prompt("Por favor, ingresa tu apellido:");
 
-alert("Hola, " + nombre + " " + apellido + " Sigue los pasos de compra");
+alert("Hola, " + nombre + " " + apellido + " sigue los pasos de compra : )");
 
 var respuesta;
 var carrito = []; 
@@ -21,22 +21,22 @@ var total = 0;
 
 while (true) {
   
-  respuesta = prompt("¿Qué producto deseas agregar al carrito? \n- Remera Lisa: $10\n- Remera Estampada: $15\n- Pantalón: $20\n- comprar").toLowerCase(); // Convertimos la respuesta a minúsculas
+  respuesta = prompt("¿Qué producto deseas agregar al carrito?\n\nElige marcando (a,b,c) y finaliza con comprar\n\n- A) Remera Lisa: $10\n- B) Remera Estampada: $15\n- C) Pantalón: $20\n-Comprar").toLowerCase(); // Convertimos la respuesta a minúsculas
 
-  if (respuesta === "remera lisa") {
+  if (respuesta === "a") {
     carrito.push("Remera Lisa");
     total += 10;
-  } else if (respuesta === "remera estampada") {
+  } else if (respuesta === "b") {
     carrito.push("Remera Estampada");
     total += 15;
-  } else if (respuesta === "pantalón") {
+  } else if (respuesta === "c") {
     carrito.push("Pantalón");
     total += 20;
   } else if (respuesta === "comprar") {
     break; 
   } else {
    
-    alert("Respuesta no válida. Por favor, elige un producto o 'comprar'.");
+    alert("Respuesta no válida. Por favor, elige a,b,c o 'comprar'.");
   }
 }
 
